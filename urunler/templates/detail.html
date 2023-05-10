@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}    
+
+{% block title %}
+    <title>Neos E-Ticaret/Ürün-Detay</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row border">
+            <div class="col-4">
+                <img src="{{urunum.resim.url}}" height="200px"  alt="{{urun.isim}}">
+            </div>
+
+            <div class="col-8">
+                <h3>{{urunum.isim}}</h3>
+                <p>{{urunum.aciklama}}</p>
+                <p>{{urunum.fiyat}}</p>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}
+        
+
+
+   

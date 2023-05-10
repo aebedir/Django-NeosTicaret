@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %} 
+
+{% block content %}
+{% if user.is_authenticated%}
+<div class="container">
+    <form action="" method="POST" enctype="multipart/form-data" class="w-50 m-auto border p-3">
+        {% csrf_token %}
+        <label for="">Resim</label>
+        <input type="file" name="resim" class="form-control" id="">
+        <label for="">Ürün İsmi</label>
+        <input type="text" class="form-control" name="isim">
+        <label for="">Ürün Açıklaması</label>
+        <textarea class="form-control" name="aciklama" id="" cols="30" rows="5"></textarea>
+        <label for="">Fiyat</label>
+        <input type="number" name="fiyat" class="form-control" id="">
+        <input type="submit" value="Oluştur" class="btn btn-primary mt-3">
+    </form>
+</div>
+{% else %}
+<h5>Lütfen Giriş Yapınız</h5>
+<a href="{% url 'login' %}">Giriş Yap</a>
+{% endif %}
+
+
+{% endblock content %}
