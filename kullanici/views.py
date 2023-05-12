@@ -25,12 +25,12 @@ def userLogin(request):
         
         user = authenticate(request,username=kullanici,password=sifre)
 
-        if kullanici is not None:
+        if user is not None:
             login(request,user)
             messages.success(request, 'Giriş Başarılı')
             return redirect('index')
         else:
-            print("kullanıcı adı veya şifre hatalı")
+            messages.error(request,'Kullanıcı Adı veya Şifre Hatalı')
             return redirect('login')
     return render(request,'login.html')
 

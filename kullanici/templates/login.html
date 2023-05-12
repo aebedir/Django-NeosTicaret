@@ -2,6 +2,11 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .alert-error{
+        background-color: rgba(255, 0, 0, 0.651);
+    }
+</style>
 <div class="conteiner">
     <form action="" method="POST" class="w-50 m-auto">
         {% csrf_token %}
