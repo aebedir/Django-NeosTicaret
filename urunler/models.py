@@ -10,4 +10,10 @@ class Urun(models.Model):
 
     def __str__(self):
         return self.isim
+    
+
+#database relationship
+
+
+
 

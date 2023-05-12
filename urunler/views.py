@@ -5,8 +5,13 @@ from django.contrib import messages
 # Create your views here.
 def index(request):
     urunler = Urun.objects.all()
+    search=''
+    if request.GET.get('search'):
+        search = request.GET.get('search')
+        urunler = Urun.objects.filter(isim__icontains = search)
     context ={
-        'urunler':urunler
+        'urunler':urunler,
+        'search':search
     }
     return render(request,'index.html',context)
 

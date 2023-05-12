@@ -26,7 +26,7 @@
     {% block content %}
     <div class="container mt-5">
       <div class="row">
-
+        {% if urunler|length > 0 %}       
           {% for urun in urunler %}
               <div class="col-4
               ">
@@ -41,6 +41,11 @@
                   </div>
               </div>
           {% endfor %}
+        {% else %}
+        <h1 class="text-center">
+            Eşleşen Ürün Bulunamadı
+        </h1>
+        {% endif %} 
       </div>
     </div>
     {% endblock content %}
