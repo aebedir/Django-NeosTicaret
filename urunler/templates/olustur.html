@@ -8,6 +8,13 @@
         {% csrf_token %}
         <label for="">Resim</label>
         <input type="file" name="resim" class="form-control" id="">
+        <label for="">Kategori</label>
+        <select class="form-control " name="kategori" id="">
+            <option value="">--------</option>
+            {% for kategori in kategoriler  %}
+                <option value="{{kategori.id}}">{{kategori.isim}}</option>
+            {% endfor %}
+        </select>
         <label for="">Ürün İsmi</label>
         <input type="text" class="form-control" name="isim">
         <label for="">Ürün Açıklaması</label>

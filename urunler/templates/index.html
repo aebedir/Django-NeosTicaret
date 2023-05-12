@@ -34,6 +34,7 @@
                       <img src="{{urun.resim.url}}" height="200px" class="card-img-top" alt="{{urun.isim}}">
                       <div class="card-body">
                           <h5 class="card-title">{{urun.isim}}</h5>
+                          <p>{{urun.kategori}}</p>
                           <p class="card-text">{{urun.aciklama}}</p>
                           <p>{{urun.fiyat}} tl</p>
                           <a href="{% url 'detail' urun.id %}" class="btn btn-primary">Ürünü İncele</a>
