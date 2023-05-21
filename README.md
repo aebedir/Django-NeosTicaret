@@ -1,5 +1,11 @@
 # Neos-Ticaret-With-Django
 
-E-Ticaret sitesi anasayfa, login, register, admin paneli ürün ekleme ve login ile ürün ekleme eklendi.
+E-Ticaret sitesi anasayfa
+Kullanıcı girişi
+Giriş yapıldıktan sonra sayfa üzerinden dinamik olarak ürün ekleme
+Admin panelinden ürün ekleme
+Sayfa üzerinden kullanıcı ekleme
+Ürün kategorileme
+Ürün arama ve filtreleme
 
 
